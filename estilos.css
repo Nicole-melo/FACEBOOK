@@ -2,19 +2,17 @@
   --fb-blue:#1877f2;
   --fb-green:#42b72a;
   --bg:#f0f2f5;
+  --border:#dddfe2;
   --text:#1c1e21;
   --muted:#606770;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
   font-family: Helvetica, Arial, sans-serif;
   background:var(--bg);
-  color:var(--text);
 }
 
 .wrap{
@@ -22,34 +20,12 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:80px;
-  padding:40px;
-}
-
-.left{
-  max-width:420px;
-}
-
-.brand{
-  color:var(--fb-blue);
-  font-size:56px;
-  font-weight:700;
-  margin:0 0 12px 0;
-  letter-spacing:-1px;
-}
-
-.tagline{
-  font-size:22px;
-  line-height:28px;
-}
-
-.right{
-  max-width:396px;
-  width:100%;
+  padding:20px;
 }
 
 .card{
   background:#fff;
+  width:396px;
   padding:20px;
   border-radius:8px;
   box-shadow:0 2px 4px rgba(0,0,0,.1),
@@ -57,14 +33,19 @@ body{
   text-align:center;
 }
 
-.card h2{
-  margin:6px 0 10px;
+input{
+  width:100%;
+  padding:14px 16px;
+  margin-bottom:12px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  font-size:17px;
+  background:#f5f6f7;
+  color:var(--text);
 }
 
-.note{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:14px;
+input::placeholder{
+  color:#90949c;
 }
 
 .btn{
@@ -72,9 +53,10 @@ body{
   width:100%;
   padding:12px;
   border-radius:6px;
-  text-decoration:none;
+  font-size:20px;
   font-weight:700;
-  margin:10px 0;
+  text-decoration:none;
+  margin-top:6px;
 }
 
 .primary{
@@ -85,6 +67,17 @@ body{
 .secondary{
   background:var(--fb-green);
   color:#fff;
+  width:auto;
+  margin:16px auto 0;
+  padding:12px 18px;
+}
+
+.link{
+  display:block;
+  margin:14px 0;
+  color:var(--fb-blue);
+  font-size:14px;
+  text-decoration:none;
 }
 
 .divider{
@@ -92,19 +85,3 @@ body{
   background:#dadde1;
   margin:16px 0;
 }
-
-.footer{
-  margin-top:22px;
-  font-size:14px;
-  text-align:center;
-}
-
-@media (max-width: 900px){
-  .wrap{
-    flex-direction:column;
-    gap:24px;
-    text-align:center;
-  }
-  .brand{ font-size:48px; }
-}
-
