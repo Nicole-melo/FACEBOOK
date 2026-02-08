@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Facebook · Presentación</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <title>Facebook – Inicia sesión o regístrate</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<main class="wrap">
-  <section class="card">
-    <!-- Inputs SOLO VISUALES -->
-    <input
-      type="text"
-      placeholder="Correo electrónico o número de teléfono"
-      disabled
-    />
+<div class="page">
 
-    <input
-      type="password"
-      placeholder="Contraseña"
-      disabled
-    />
+    <!-- IZQUIERDA -->
+    <div class="left">
+        <h1 class="logo">facebook</h1>
+        <h2 class="slogan">
+            Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.
+        </h2>
+    </div>
 
-    <!-- Botón que REDIRIGE (no envía datos) -->
-    <a href="segunda.html" class="btn primary">Iniciar sesión</a>
+    <!-- DERECHA -->
+    <div class="right">
+        <div class="card">
+            <input type="text" placeholder="Correo electrónico o número de teléfono" disabled>
+            <input type="password" placeholder="Contraseña" disabled>
 
-    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+            <button class="login">Iniciar sesión</button>
 
-    <div class="divider"></div>
+            <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
 
-    <a href="segunda.html" class="btn secondary">Crear cuenta nueva</a>
-  </section>
-</main>
+            <div class="line"></div>
+
+            <button class="create">Crear cuenta nueva</button>
+        </div>
+
+        <p class="page-link">
+            <strong>Crea una página</strong> para una celebridad, una marca o un negocio.
+        </p>
+    </div>
+
+</div>
 
 </body>
 </html>
+
+
 
 
 
