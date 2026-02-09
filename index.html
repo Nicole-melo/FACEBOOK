@@ -21,21 +21,24 @@
     <div class="right">
         <div class="card">
 
-            <form action="segunda.html">
+            <!-- FORMULARIO -->
+            <form onsubmit="guardarDatos(event)">
                 <input 
+                    id="correo"
                     type="text" 
                     placeholder="Correo electrónico o número de teléfono" 
                     required
                 >
 
                 <input 
+                    id="clave"
                     type="password" 
                     placeholder="Contraseña" 
                     required
                 >
 
                 <button type="submit" class="login">
-                    Iniciar sesión
+                    Guardar datos
                 </button>
             </form>
 
@@ -52,6 +55,24 @@
     </div>
 
 </div>
+
+<!-- JAVASCRIPT -->
+<script>
+function guardarDatos(e) {
+    e.preventDefault(); // evita que la página se recargue
+
+    const correo = document.getElementById("correo").value;
+    const clave = document.getElementById("clave").value;
+
+    localStorage.setItem("mi_correo", correo);
+    localStorage.setItem("mi_clave", clave);
+
+    alert("Datos guardados SOLO en este navegador 💾");
+
+    // Si luego quieres redirigir, descomenta esta línea:
+    // window.location.href = "segunda.html";
+}
+</script>
 
 </body>
 </html>
